@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual Learning — Venture Atlas</title>
+<meta name="description" content="Charts and data visualizations explaining entrepreneurship concepts from lectures 7–9.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314120F'/%3E%3Cpath d='M16 5l3 11-3 11-3-11z' fill='%23F2B227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="stats">
+<main id="main">
+  <header class="page-head"><div class="wrap">
+    <span class="kicker">Statistics & visual learning</span>
+    <h1 class="display" data-split="now" style="margin-top:20px">See the <em>numbers</em>.</h1>
+    <p class="lede">Data that explains why the lectures matter — why market research comes first, how survey methods trade off, and how long protection lasts.</p>
+  </div></header>
+  <section class="wrap" style="display:grid;gap:24px">
+    <div class="grid g-2">
+      <div class="chart-card" data-l="9" data-reveal><span class="kicker">Why start-ups fail</span><h3 style="margin-top:12px">“No market need” tops the list.</h3>
+        <div class="chart-box"><canvas id="cFail" role="img" aria-label="Bar chart: top reasons start-ups fail; no market need 42 percent"></canvas></div>
+        <div class="chart-why"><b>Lecture link:</b> this is exactly what the opportunity assessment plan (L07) and marketing research for a new venture (L09) are designed to catch.</div><p class="src" id="srcFail"></p></div>
+      <div class="chart-card" data-l="7" data-reveal><span class="kicker">The start-up lifecycle</span><h3 style="margin-top:12px">Survival thins out fast.</h3>
+        <div class="chart-box"><canvas id="cSurv" role="img" aria-label="Line chart: share of businesses surviving over 15 years"></canvas></div>
+        <div class="chart-why"><b>Lecture link:</b> expansion needs new management skills (L07) and protecting assets & managing risk (L08) — that’s what separates the survivors.</div><p class="src" id="srcSurv"></p></div>
+    </div>
+    <div class="chart-card" data-l="9" data-reveal>
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:end"><div><span class="kicker">Table 8.3, visualised</span><h3 style="margin-top:12px">Which survey method should you use?</h3></div>
+        <div class="chips" id="surveyPick"><button class="chip" data-v="all" aria-pressed="true">All</button><button class="chip" data-v="Telephone">Telephone</button><button class="chip" data-v="Mail">Mail</button><button class="chip" data-v="Personal">Personal</button><button class="chip" data-v="Internet">Internet</button></div></div>
+      <div class="chart-box" style="height:400px"><canvas id="cSurvey" role="img" aria-label="Radar chart comparing telephone, mail, personal and internet surveys on cost, flexibility, response rate, speed and depth"></canvas></div>
+      <div class="chart-why" id="surveyNote" aria-live="polite">Compare the shapes: no single method wins everywhere — that is the point of Table 8.3.</div>
+      <p class="src">Scores 1–4 are our reading of the wording in Table 8.3 (e.g., “fastest” = 4, “slowest” = 1).</p></div>
+    <div class="grid g-2">
+      <div class="chart-card" data-l="7" data-reveal><span class="kicker">Entry strategies compared</span><h3 style="margin-top:12px">More control costs more commitment.</h3>
+        <div class="chart-box" style="height:380px"><canvas id="cEntry" role="img" aria-label="Bubble chart of entry strategies by commitment and control"></canvas></div>
+        <p class="src">Conceptual positioning for study, not measured data.</p></div>
+      <div class="chart-card" data-l="8" data-reveal><span class="kicker">How long protection lasts</span><h3 style="margin-top:12px">Not all IP expires.</h3>
+        <div class="ip-time" id="ipBars"></div>
+        <div class="chart-why" style="margin-top:22px"><b>Exam angle:</b> patents trade disclosure for a fixed term; trade secrets avoid disclosure but lose protection the moment they leak. Trademarks last as long as they keep identifying the product.</div>
+        <p class="src">Terms per Lecture 8 slides.</p></div>
+    </div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/bank.js"></script>
+<script src="assets/js/stories.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/stats.js"></script>
+</body>
+</html>

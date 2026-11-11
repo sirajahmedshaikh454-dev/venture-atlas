@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revision Center — Venture Atlas</title>
+<meta name="description" content="Definitions, must-know lists, comparisons and practice questions for lectures 7–9.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314120F'/%3E%3Cpath d='M16 5l3 11-3 11-3-11z' fill='%23F2B227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="revision">
+<main id="main">
+  <header class="page-head"><div class="wrap">
+    <span class="kicker">Revision center</span>
+    <h1 class="display" data-split="now" style="margin-top:20px">Everything, on <em>one page</em>.</h1>
+    <p class="lede">The night-before page: every definition, every list the examiner loves, side-by-side comparisons, and quick practice.</p>
+  </div></header>
+  <section class="wrap">
+    <div class="rev-tools"><a class="chip" href="#progress">Progress</a><a class="chip" href="#glossary">Definitions</a><a class="chip" href="#lists">Must-know lists</a><a class="chip" href="#compare-h">Comparisons</a><a class="chip" href="#practice-h">Practice</a><button class="btn ghost sm" id="printBtn"><i data-lucide="printer"></i>Print notes</button></div>
+    <div id="progress" class="grid g-2" style="scroll-margin-top:90px"><div id="revProgress" class="grid g-2" style="grid-column:1/-1"></div></div>
+
+    <h2 class="display" id="glossary" style="font-size:clamp(2rem,4vw,3.2rem);margin:72px 0 20px;scroll-margin-top:90px">Key <em>definitions</em></h2>
+    <div class="rev-tools"><input class="txt" id="glSearch" type="search" placeholder="Filter terms…" aria-label="Filter definitions"><div class="chips" id="glFilter"></div><span class="mono muted" id="glCount" style="font-size:.8rem"></span></div>
+    <div class="gloss" id="gloss"></div>
+
+    <h2 class="display" id="lists" style="font-size:clamp(2rem,4vw,3.2rem);margin:72px 0 20px;scroll-margin-top:90px">Frequently tested <em>lists</em></h2>
+    <p class="muted" style="margin-top:-8px">The number tells you how many items to recall. Cover the list and test yourself.</p>
+    <div class="must" id="must"></div>
+
+    <h2 class="display" id="compare-h" style="font-size:clamp(2rem,4vw,3.2rem);margin:72px 0 20px;scroll-margin-top:90px">Important <em>differences</em></h2>
+    <div id="compare"></div>
+
+    <h2 class="display" id="practice-h" style="font-size:clamp(2rem,4vw,3.2rem);margin:72px 0 20px;scroll-margin-top:90px">Quick <em>practice</em></h2>
+    <div id="practice"></div>
+    <div class="btn-row" style="margin-top:16px"><button class="btn ghost" id="morePractice"><i data-lucide="shuffle"></i>Five more</button><a class="btn" href="quiz.html?mode=final">Take the final exam</a></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/bank.js"></script>
+<script src="assets/js/stories.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/revision.js"></script>
+</body>
+</html>

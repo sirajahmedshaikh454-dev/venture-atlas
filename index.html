@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Venture Atlas — Technology Entrepreneurship, Lectures 7–9</title>
+<meta name="description" content="An interactive study platform for Technology Entrepreneurship: international entrepreneurship, legal issues and the marketing plan.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314120F'/%3E%3Cpath d='M16 5l3 11-3 11-3-11z' fill='%23F2B227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home" data-dark="1">
+<main id="main">
+  <section class="hero" aria-label="Introduction">
+    <canvas id="hub" aria-label="Rotating 3D globe with trade routes and three orbiting lecture moons" role="img"></canvas>
+    <div class="hero-legend" id="legend">
+      <a href="lecture-7.html" data-id="7"><i style="background:#5466FF"></i>07 International</a>
+      <a href="lecture-8.html" data-id="8"><i style="background:#D8473C"></i>08 Legal issues</a>
+      <a href="lecture-9.html" data-id="9"><i style="background:#F2B227"></i>09 Marketing plan</a>
+    </div>
+    <div class="wrap">
+      <span class="kicker">Technology Entrepreneurship · Lectures 07 – 09</span>
+      <h1 class="display" data-split="now" data-delay=".2" style="margin-top:22px">Map the <em>venture</em> beyond borders.</h1>
+      <p class="lede" style="margin-top:24px">Go global, protect what you build, and plan how to sell it — three lectures turned into an atlas you can explore, test and remember.</p>
+      <div class="btn-row" style="margin-top:32px">
+        <a class="btn magnetic" href="lecture-7.html"><i data-lucide="compass"></i>Begin the journey</a>
+        <a class="btn ghost magnetic" href="#lectures"><i data-lucide="map"></i>Explore the map</a>
+      </div>
+      <p class="hero-hint">MOVE YOUR CURSOR · CLICK A MOON TO OPEN ITS LECTURE · PRESS <kbd style="border-color:rgba(242,237,227,.3)">/</kbd> TO SEARCH</p>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <span class="kicker">The course, condensed</span>
+          <h2 class="display" data-split style="margin-top:18px">Three lectures. <em>One</em> founder’s journey.</h2>
+        </div>
+        <p class="lede" data-reveal>First you decide <b>where</b> to take the venture (Lecture 7). Then you make sure no one can take <b>what</b> you built (Lecture 8). Finally you plan <b>how</b> to win customers (Lecture 9). Every page saves your progress automatically.</p>
+      </div>
+      <div class="stats-strip" style="margin-top:56px" data-reveal>
+        <div class="stat"><div class="n" data-count="3">3</div><div class="t">Lectures</div></div>
+        <div class="stat"><div class="n" id="nSec">0</div><div class="t">Sections</div></div>
+        <div class="stat"><div class="n" id="nQ">0</div><div class="t">Quiz questions</div></div>
+        <div class="stat"><div class="n" id="nC">0</div><div class="t">Flashcards</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lectures" style="padding-top:0">
+    <div class="wrap">
+      <span class="kicker">Lecture library</span>
+      <h2 class="display" data-split style="margin-top:18px">Choose your <em>chapter</em>.</h2>
+      <div class="folios" id="folios"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--paper-2)">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div><span class="kicker">Learning roadmap</span><h2 class="display" data-split style="margin-top:18px">Read. Play. <em>Recall.</em></h2></div>
+        <p class="lede" data-reveal>The route that turns slides into memory. Each stop lights up as you complete it.</p>
+      </div>
+      <div class="roadmap" id="roadmap"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="kicker">Practice studio</span>
+      <h2 class="display" data-split style="margin:18px 0 48px">Tools that make it <em>stick</em>.</h2>
+      <div class="tools">
+        <a class="tool wide" href="lab.html" data-reveal data-l="7"><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="flask-conical"></i></span><h3>Interactive Lab</h3><p>Rank foreign markets, sort mergers and IP, test SMART goals and contracts.</p></a>
+        <a class="tool wide" href="quiz.html" data-reveal><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="target"></i></span><h3>Quiz Arena</h3><p>Randomized MCQs by lecture and difficulty, with explanations and a final exam.</p></a>
+        <a class="tool" href="flashcards.html" data-reveal><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="layers"></i></span><h3>Flashcards</h3><p>Flip, track what you know, drill the rest.</p></a>
+        <a class="tool" href="cases.html" data-reveal><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="briefcase"></i></span><h3>Case Files</h3><p>Real start-up wins and failures — make the call.</p></a>
+        <a class="tool" href="stats.html" data-reveal><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="bar-chart-3"></i></span><h3>Visuals</h3><p>Charts and data that explain the concepts.</p></a>
+        <a class="tool wide" href="revision.html" data-reveal><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="notebook-pen"></i></span><h3>Revision Center</h3><p>All definitions, must-know lists and side-by-side comparisons on one page.</p></a>
+        <button class="tool wide" type="button" onclick="VA.openSearch()" data-reveal style="text-align:left;font:inherit"><i data-lucide="arrow-up-right" class="t-arrow"></i><span class="t-ico"><i data-lucide="search"></i></span><h3>Search everything</h3><p>Every concept, definition and case — press <kbd>/</kbd> or <kbd>Ctrl K</kbd> anywhere.</p></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="fact-band" data-reveal>
+        <div class="fn" id="factN">42%</div>
+        <div><span class="kicker" style="color:rgba(242,237,227,.6)">Did you know?</span><p id="factT" style="margin-top:10px"></p><small id="factS"></small></div>
+        <button class="icon-btn magnetic" id="factNext" aria-label="Next fact"><i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" id="progress">
+    <div class="wrap">
+      <span class="kicker">Your progress</span>
+      <h2 class="display" data-split style="margin:18px 0 40px">Where you <em>stand</em>.</h2>
+      <div class="grid g-3" id="progressCards"></div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/bank.js"></script>
+<script src="assets/js/stories.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/scene.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

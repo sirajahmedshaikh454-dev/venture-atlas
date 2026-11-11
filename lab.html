@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Lab — Venture Atlas</title>
+<meta name="description" content="Interactive tools: foreign market selection, merger and IP sorting, SMART goals, contract checker.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314120F'/%3E%3Cpath d='M16 5l3 11-3 11-3-11z' fill='%23F2B227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="lab">
+<main id="main">
+  <header class="page-head"><div class="wrap">
+    <span class="kicker">Interactive learning</span>
+    <h1 class="display" data-split="now" style="margin-top:20px">The concept <em>lab</em>.</h1>
+    <p class="lede">Frameworks are easier to remember once you have used them. Four hands-on tools, each built straight from the lectures.</p>
+  </div></header>
+  <section class="wrap">
+    <nav class="lab-nav" aria-label="Lab modules">
+      <a class="chip" href="#market" data-l="7"><span class="dot"></span>Market Selector</a>
+      <a class="chip" href="#sorter"><span class="dot"></span>Scenario Sorter</a>
+      <a class="chip" href="#smart" data-l="9"><span class="dot"></span>SMART Goal Checker</a>
+      <a class="chip" href="#contract" data-l="8"><span class="dot"></span>Contract Checker</a>
+    </nav>
+
+    <section class="lab-mod" id="market" data-l="7">
+      <header><div><span class="kicker">Lecture 7 · Foreign market selection</span><h2>Market Selector</h2><p>Run the five-step model on three fictional markets. Edit the scores, set the weights, and see which market wins.</p></div><a class="btn ghost sm" href="lecture-7.html#selection">Theory →</a></header>
+      <div id="marketBody"></div>
+    </section>
+
+    <section class="lab-mod" id="sorter">
+      <header><div><span class="kicker">Lectures 7 · 8 · 9 · Classification</span><h2>Scenario Sorter</h2><p>Read the scenario, drop it in the right bucket. Choose a deck: merger types, IP protection, SWOT or entry strategies.</p></div></header>
+      <div class="chips" id="sorterDecks" style="margin-bottom:18px"></div>
+      <div id="sorterBody"></div>
+    </section>
+
+    <section class="lab-mod" id="smart" data-l="9">
+      <header><div><span class="kicker">Lecture 9 · Marketing objectives</span><h2>SMART Goal Checker</h2><p>Type a marketing objective. Specific, Measurable and Time-bound are detected automatically; Achievable and Relevant need your honest judgement.</p></div><a class="btn ghost sm" href="lecture-9.html#keysteps">Theory →</a></header>
+      <div class="panel" id="smartBox">
+        <label class="field-label" for="smartIn">Your marketing objective</label>
+        <textarea class="smart-in" id="smartIn" rows="2" placeholder="e.g. Increase website leads by 20% within 6 months"></textarea>
+        <div class="chips" id="smartSamples" style="margin-top:12px"></div>
+        <div class="check-list" style="margin-top:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));display:grid">
+          <label><input type="checkbox" id="smartA"><span>It is <b>achievable</b> with our budget, team and time.</span></label>
+          <label><input type="checkbox" id="smartR"><span>It is <b>relevant</b> to our mission and business goals.</span></label>
+        </div>
+        <div class="smart-grid">
+          <div class="smart-l" data-k="S"><div class="L">S</div><small>Specific</small></div>
+          <div class="smart-l" data-k="M"><div class="L">M</div><small>Measurable</small></div>
+          <div class="smart-l" data-k="A"><div class="L">A</div><small>Achievable</small></div>
+          <div class="smart-l" data-k="R"><div class="L">R</div><small>Relevant</small></div>
+          <div class="smart-l" data-k="T"><div class="L">T</div><small>Time-bound</small></div>
+        </div>
+        <div id="smartVerdict" class="verdict" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="lab-mod" id="contract" data-l="8">
+      <header><div><span class="kicker">Lecture 8 · Table 6.5</span><h2>Contract Validity Checker</h2><p>Is this deal a binding contract? Load a scenario or set the conditions yourself.</p></div><a class="btn ghost sm" href="lecture-8.html#contracts">Theory →</a></header>
+      <div class="panel" id="contractBox">
+        <span class="field-label">Scenarios</span>
+        <div class="chips" id="contractPresets" style="margin-bottom:22px">
+          <button class="chip" data-p="good">Signed supply agreement</button>
+          <button class="chip" data-p="hand">$2,400 handshake deal</button>
+          <button class="chip" data-p="gamb">Betting-pool partnership</button>
+          <button class="chip" data-p="gift">“Free” promise, nothing in return</button>
+        </div>
+        <div class="grid g-2">
+          <ul class="check-list" id="contractConds"></ul>
+          <div>
+            <label class="field-label" for="cAmount">Value of the sale ($)</label>
+            <input class="txt" type="number" id="cAmount" min="0" value="1200">
+            <ul class="check-list" style="margin-top:12px"><li><label><input type="checkbox" id="cLong"><span>The deal cannot be completed within one year</span></label></li></ul>
+            <div id="contractVerdict" class="verdict" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/bank.js"></script>
+<script src="assets/js/stories.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/lab.js"></script>
+</body>
+</html>
